@@ -200,7 +200,7 @@ export const projects = [
     category: 'JavaScript',
     image: './coffee-shop.webp',
     featured: false,
-    demoUrl: '#',
+    demoUrl: 'https://offee-shop.netlify.app/',
   },
   {
     id: 'lulu dishes',

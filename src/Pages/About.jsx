@@ -1,6 +1,5 @@
 
 import { skills } from '../Data/technologies'
-import michael from '/michael.jpg'
 import { timelineItems } from '../Data/technologies'
 import { valueProps } from '../Data/capabilities'
 
@@ -40,7 +39,7 @@ export const AboutMe = () => {
                         {/* Right Image Column */}
                         <div className="about-image-wrapper">
                             <img
-                                src={michael}
+                                src='/michael.webp'
                                 alt="Developer working at desk"
                                 className="about-image"
                             />
