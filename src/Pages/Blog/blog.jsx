@@ -7,6 +7,7 @@ import { NewsletterCard } from "../../components/Blog/newslatterCard";
 import { BlogGrid } from "../../components/Blog/blogGrid";
 import { EmptyBlogState } from "../../components/Blog/emptyBlogState";
 import { Pagination } from "../../components/Blog/pagenation";
+import { motion } from "motion/react";
 
 export const Blog = () => {
   const {
@@ -24,6 +25,13 @@ export const Blog = () => {
   } = useBlog();
 
   return (
+    <motion.div
+          initial={{ opacity: 0, x: -100 }} // Slide in from the right
+      animate={{ opacity: 1, x: 0 }}   // Center
+      exit={{ opacity: 0, x: 100 }}   // Slide out to the left
+      transition={{ duration: 1.2 }}
+         
+         >
     <div className="blog-page">
       <div className="blog-container">
         <BlogHeader />
@@ -58,5 +66,6 @@ export const Blog = () => {
         </div>
       </div>
     </div>
+    </motion.div>
   );
 };

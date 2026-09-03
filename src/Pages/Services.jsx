@@ -1,7 +1,15 @@
 
 import { offerings } from "../Data/capabilities"
+import { motion } from "motion/react"
 export const ServicePage = () => {
     return (
+        <motion.div
+          initial={{ opacity: 0, x: -100 }} // Slide in from the right
+      animate={{ opacity: 1, x: 0 }}   // Center
+      exit={{ opacity: 0, x: 100 }}   // Slide out to the left
+      transition={{ duration: 1.2 }}
+         
+         >
         <section className="offerings-section">
             <div className="offerings-container">
                 {/* Section Header */}
@@ -46,5 +54,6 @@ export const ServicePage = () => {
                 </div>
             </div>
         </section>
+        </motion.div>
     )
 }

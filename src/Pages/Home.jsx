@@ -5,10 +5,19 @@ import { technologies } from "../Data/technologies"
 import { TechnologyCard } from "../components/pageComponents/technologyCard"
 import { capabilities } from "../Data/capabilities"
 import { CapabilityCard } from "../components/pageComponents/capabilityCard.jsx"
+import {motion} from "motion/react"
 
 export const HomePage = () => {
     return (
         <>
+         <motion.div
+          initial={{ opacity: 0, x: 100 }} // Slide in from the right
+      animate={{ opacity: 1, x: 0 }}   // Center
+      exit={{ opacity: 0, x: -100 }}   // Slide out to the left
+      transition={{ duration: 1.2 }}
+      viewport={{ once: true }}
+         
+         >
             <section className="hero">
                 <div className="hero-container">
 
@@ -81,6 +90,7 @@ export const HomePage = () => {
 
                 </div>
             </section>
+            </motion.div>
 
 
         </>

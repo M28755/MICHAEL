@@ -18,7 +18,7 @@ export const contactData = {
       id: "phone",
       label: "Phone",
       value: "+(254) 758644293",
-      subtext: "Mon-Fri, 9am-5pm PST",
+      subtext: "Any time",
       href: "tel:+254758644293",
       iconType: "phone",
     },

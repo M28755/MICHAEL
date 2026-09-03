@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { projects } from "../Data/capabilities";
+import { motion } from "motion/react";
 
 const filterCategories = ['ALL', 'HTML/CSS', 'JavaScript', 'React', 'UI/UX'];
 
@@ -12,6 +13,13 @@ export const Projects =() =>{
       ? projects
       : projects.filter((project) => project.category === activeFilter);
     return(
+      <motion.div
+          initial={{ opacity: 0, x: 100 }} // Slide in from the right
+      animate={{ opacity: 1, x: 0 }}   // Center
+      exit={{ opacity: 0, x: -100 }}   // Slide out to the left
+      transition={{ duration: 1.2 }}
+         
+         >
         <section className="works-section">
       <div className="works-container">
         {/* Header */}
@@ -104,6 +112,7 @@ export const Projects =() =>{
         </div>
       </div>
     </section>
+    </motion.div>
     )
 
 }
