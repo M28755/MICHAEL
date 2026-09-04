@@ -34,7 +34,7 @@ export const Header = () =>{
                <MobileMenuButton  isOpen={isMenuOpen} onClick={toggleMenu}/>
 
             </div>
-            <MobileMenu isOpen={isMenuOpen} onclose={closeMenu}/>
+            <MobileMenu isOpen={isMenuOpen} onClose={closeMenu}/>
         </header>
     )
 }

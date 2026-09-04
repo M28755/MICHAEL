@@ -17,10 +17,10 @@ export const MobileMenu = ({ isOpen, onClose }) => {
     return (
         <>
             {/* dark overlay behind the navigation when use click ,close the navigatio*/}
-            <div className={`mobile-naigation-overlay ${isOpen ? 'is-visible' : ""}`} onClick={onClose}></div>
+            <div className={`mobile-navigation-overlay ${isOpen ? 'is-visible' : ""}`} onClick={onClose}></div>
 
 
-            <aside  className={`mobile-navigation ${isOpen ? 'is-open' : ""}`} aria-label="Mobile navigation" aria-hidden={!isOpen}>
+            <aside className={`mobile-navigation ${isOpen ? 'is-open' : ""}`} aria-label="Mobile navigation" aria-hidden={!isOpen}>
 
                 {/* Mobile navigation header */}
                 <div className="mobile-navigation-header">
@@ -29,7 +29,7 @@ export const MobileMenu = ({ isOpen, onClose }) => {
                     </span>
 
                     {/* Close button */}
-                    
+
                 </div>
 
                 {/* Navigation links */}
@@ -39,11 +39,12 @@ export const MobileMenu = ({ isOpen, onClose }) => {
                             <li key={path}>
                                 <NavLink
                                     to={path}
+                                    onClick={onClose}
                                     className={({ isActive }) =>
                                         `mobile-navigation-link ${isActive ? "active" : ""
                                         }`
                                     }
-                                    onClick={onClose}
+
                                 >
                                     {label}
                                 </NavLink>

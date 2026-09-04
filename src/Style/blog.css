@@ -55,7 +55,7 @@
     /* 20px */
     --section-space-desktop: 6rem;
     /* 96px */
-    --section-space-mobile: 4rem;
+    --section-space-mobile: 5rem;
     /* radius token */
     --radius-sm: 4px;
     --radius-md: 6px;
@@ -106,6 +106,9 @@
   .blog-container {
     padding-left: var(--gutter-mobile);
     padding-right: var(--gutter-mobile);
+  }
+  .newsletter-card{
+    display: none;
   }
 }
 
